@@ -1,0 +1,49 @@
+/*common*/
+.d-flex{display:flex}
+.justify-content-between{justify-content: space-between;}
+.abs{position:absolute}
+.rel{position:relative}
+.fix{position:fixed}
+
+.backgroundno{ background-repeat: no-repeat; background-position: center; background-size: cover;}
+
+/*커스터마이징*/
+#logo img{height:50px; padding-right:100px;}
+#content{ height:100vh; background: url(/data/file/banner/abbf3c84d896ddaeaba94a292380b506_8dJnGq1i_65087b0ea3be5d5b8f579364abde5e43b96962da.png);}
+.hd_sch_wr, .hd_login, #tnb, #aside, #gnb_1dul, .lt_wr, .latest_wr, .latest_top_wr, #ft_wr .notice, #visit, .lat .lt_more {display:none;}
+#ft_wr .ft_cnt a:nth-child(3), #ft_wr .ft_cnt a:nth-child(4){display:none}
+#ft_company{float:right}
+
+.first_main_1 img{margin-left: -360px;}
+.poster_main_1 img{margin-left: -360px; width:1920px; height:1080px;}
+.first_write, .poster_write{display:none}
+
+/*퀵메뉴(left)*/
+div#fixedmenu{width:3px; background-color: white;
+  top:0; height:100%; left:50%;
+  margin-left:-640px;
+  z-index: 1000000;
+}
+
+#gnb{
+    flex-direction:column;
+    align-items:center;
+    top:33%;
+}
+#gnb li{
+    border-radius:10px;
+    border: 1px solid white;
+    background-color:#62CFDF;
+    padding:5px 20px;
+}
+#gnb li a{
+    display:block;
+    ;
+    color:white;
+}
+
+/* #banner{
+    background-image:url('/img/banner.png');
+    background-position:center;
+    background-repeat:no-repeat;
+} */
