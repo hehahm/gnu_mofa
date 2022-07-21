@@ -2,8 +2,8 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
-$thumb_width = 1920;
-$thumb_height = 1080;
+$thumb_width = 1280;
+$thumb_height = 1000;
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
@@ -27,11 +27,10 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     
                 <!-- 여기다가 내용 적기 -->
 
-
-     <div class="poster_main backgroundno" style="background-image:url(<?php echo $img; ?>); height:100vh">   
-         <div class="poster_write d-flex flex-column justify-content-center align-items-center text-white h-100">
-              <?php echo $list[$i]['wr_content']; ?>
-          </div>
+    <div id="content" style="background-image:url(<?php echo $img; ?>)">
+    <div class="first_write d-flex flex-column justify-content-center align-items-center text-white h-100">
+                 <?php echo $list[$i]['wr_content']; ?>          
+        </div>
      </div>
       
      <!-- 이 사이 멘트 적기 -->

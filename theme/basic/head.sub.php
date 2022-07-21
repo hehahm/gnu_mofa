@@ -58,6 +58,7 @@ if($config['cf_add_meta'])
             <meta property="og:title" content="외교부 국제기구 온라인 진출 설명회" />
             <meta property="og:description" content="제15회 설명회에 초대합니다" />
             <meta property="og:image" content="//hienhahm.dothome.co.kr/img/banner.png" />
+            
 <title><?php echo $g5_head_title; ?></title>
 
 <link rel="stylesheet" href="/theme/basic/css/default.css?ver=<?php echo time();?>">
@@ -109,17 +110,13 @@ if(!defined('G5_IS_ADMIN'))
 <script src="https://kit.fontawesome.com/1af7da0cec.js" crossorigin="anonymous"></script>
 <!-- 부트스트랩 4.6.1-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<!-- 개인 js파일 -->
-<script src="/award/js/개인폴더/개인파일.js"></script>
-<!-- aos js 파일 -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- aos css -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="https://www.cafe24.com/wp-content/themes/cafe24/images/favicon.ico" />
-	    <link rel="apple-touch-icon" href="https://www.cafe24.com/wp-content/themes/cafe24/images/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="https://www.cafe24.com/wp-content/themes/cafe24/images/apple-touch-icon.png">
-    <meta name="msapplication-TileImage" content="https://www.cafe24.com/wp-content/themes/cafe24/images/favicon.png" size="270x270" />
+<link rel="apple-touch-icon" href="https://www.cafe24.com/wp-content/themes/cafe24/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" href="https://www.cafe24.com/wp-content/themes/cafe24/images/apple-touch-icon.png">
+<meta name="msapplication-TileImage" content="https://www.cafe24.com/wp-content/themes/cafe24/images/favicon.png" size="270x270" />
 
 <!-- <link rel="icon" href="/폴더/img/파이콘파일.png"> -->
 </head>

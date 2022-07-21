@@ -19,54 +19,91 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <!-- 진짜 슬라이드 넣기 -->
 <div id="fixedmenu" class="position-fixed">
-    <ul id="gnb" class="fix d-flex">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">EVENT</a></li>
-        <li><a href="#">PROGRAM</a></li>
+    <!-- <ul id="gnb" class="fix d-flex">
+        <li class="on"><a href="#pagetop" >HOME</a></li>
+        <li><a href="#event">EVENT</a></li>
+        <li><a href="#program">PROGRAM</a></li>
         <li><a href="#">VIDEO</a></li>
         <li><a href="#">PARTICIPANTS</a></li>
         <li><a href="#">CUSTOM TEST</a></li>
-        <li><a href="#">ROSTER</a></li>
-    </ul>
-</div>
-<div class="container_w" >
+        <li><a href="#">ROSTER</a></li>        
+    </ul> -->
 
+    <ul id="gnb" class="fix d-flex">
+                <li class="on my-1"><a href="#pagetop">HOME</a></li>
+                <?php
+				$menu_datas = get_menu_db(0, true);
+				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                $i = 0;
+                foreach( $menu_datas as $row ){
+                    if( empty($row) ) continue;
+                    $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
+                ?>
+                <li class='my-1'>
+                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" ><?php echo $row['me_name'] ?></a>
+                    <?php
+                    $k = 0;
+                    foreach( (array) $row['sub'] as $row2 ){
+
+                        if( empty($row2) ) continue; 
+
+                        if($k == 0)
+                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
+                    ?>
+                        <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                    <?php
+                    $k++;
+                    }   //end foreach $row2
+
+                    if($k > 0)
+                        echo '</ul></div>'.PHP_EOL;
+                    ?>
+                </li>
+                <?php
+                $i++;
+                }   //end foreach $row
+
+                if ($i == 0) {  ?>
+                    <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                <?php } ?>
+            </ul>
+</div>
+<div id="pagetop">
 <?php echo latest('theme/first','banner',1,100);?>
   
-      
-
-        <div class="container_2">
-        <?php echo latest('theme/poster','poster',1,100);?>
-
-        </div>
-        <div class="container_3">
-        <?php echo latest('theme/basic','event',1,100);?>
-        </div>
-        
-        <div class="container_4">
-        <?php echo latest('theme/basic','program',1,100);?>
-        </div>
-
-        <div class="container_4">
-        <?php echo latest('theme/basic','brochure',1,100);?>
-        </div>
-
-        <div class="container_4">
-        <?php echo latest('theme/basic','org',1,100);?>
-        </div>
-
-        <div class="container_4">
-        <?php echo latest('theme/basic','testForm',1,100);?>
-        </div>
-
-        <div class="container_4">
-        <?php echo latest('theme/basic','testResult',1,100);?>
-        </div>
-
-        <div class="container_4">
-        <?php echo latest('theme/basic','roster',1,100);?>
-        </div>
+    <div id="poster" class="section">
+    <?php echo latest('theme/poster','poster',1,100);?>
     </div>
+
+    <div id="event" class="section">
+    <?php echo latest('theme/event','event',1,100);?>
+    </div>
+    
+    <div id="program" class="section">
+    <?php echo latest('theme/program','program',1,100);?>
+    </div>
+
+    <div id="brochure" class="section">
+    <?php echo latest('theme/brochure','brochure',1,100);?>
+    </div>
+
+    <div id="org" class="section">
+    <?php echo latest('theme/org','org',1,100);?>
+    </div>
+
+    <div id="testForm" class="section">
+    <?php echo latest('theme/testForm','testForm',1,100);?>
+    </div>
+
+    <div id="testResult" class="section">
+    <?php echo latest('theme/testResult','testResult',1,100);?>
+    </div>
+
+    <div id="roster" class="section">
+    <?php echo latest('theme/roster','roster',1,100);?>
+    </div>
+
+</div>
     <!-- 최신글 끝 -->
 
 <div class="latest_top_wr">

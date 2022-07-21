@@ -28,7 +28,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
 
-     <div class="poster_main backgroundno" style="background-image:url(<?php echo $img; ?>); height:100vh">   
+     <div id="program" class="poster_main backgroundno" style="background-image:url(<?php echo $img; ?>); height:100vh">   
          <div class="poster_write d-flex flex-column justify-content-center align-items-center text-white h-100">
               <?php echo $list[$i]['wr_content']; ?>
           </div>

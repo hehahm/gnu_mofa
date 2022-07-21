@@ -191,7 +191,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #ft h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #ft_wr {max-width:1240px;margin:0;padding:40px 0;position:relative;display:inline-block;text-align:left;}
 #ft_wr:after {display:block;visibility:hidden;clear:both;content:""}
-#ft_wr .ft_cnt {width:25%; float:left; padding:0 20px;}
+#ft_wr .ft_cnt {float:left; padding:0 20px;}
 
 #ft_link {text-align:left}
 #ft_link a {display:block;color:#fff;line-height:2em;font-weight:bold}
