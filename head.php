@@ -114,7 +114,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </ul>
     </div>
     
-    <nav id="gnb">
+    <nav id="gnb d-md-flex d-none">
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">

@@ -28,11 +28,12 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
     <div id="content" class="backgroundno" style="background-image:url(<?php echo $img; ?>)">
-    <div class="first_write d-flex flex-column justify-content-center align-items-center text-white h-100">
+    <div class="first_write d-flex flex-column justify-content-center text-white h-100">
                  <?php echo $list[$i]['wr_content']; ?>          
         </div>
      </div>
-      
+
+
      <!-- 이 사이 멘트 적기 -->
 
 

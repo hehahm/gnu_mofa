@@ -33,15 +33,83 @@ div#fixedmenu{width:3px; background-color: white;
 }
 #gnb li{
     border-radius:30px;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color:#62CFDF;
     padding:5px 20px;
+    width:155px;
 }
 #gnb li a{
     display:block;
     color:white;
     text-transform: uppercase;
+    font-weight:bold;
+    white-space:nowrap
 }
 #gnb li.on{ background-color: yellow;  }
-#gnb li.on a{ color:black}
+#gnb li.on a{ color:#222}
 
+/* 메인 배너 */
+
+#content h1{
+    font-size:5.5rem;
+    margin-top:-1rem;
+}
+#content .title_wrap{
+    border-left: 1.5rem solid white;
+    margin:.5em; margin-bottom:1rem;
+    padding-left:1.5em;
+    font-size:31px;
+}
+
+#content .first_write{
+    background-image: url(/img/plane.png);
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    margin:0 auto;
+}
+#content .date{
+    padding-bottom: 2.5rem;
+}
+#content .date p{
+    display:block;
+    background-color:yellow;
+    color:rgb(40, 116, 157);
+    font-weight:bold;
+    font-size:23px;
+    border-radius:30px;
+    width:21rem; padding:.4rem;
+    text-align:center;
+}
+#content .title_wrap{
+    transform:translate(0%, -10%);
+}
+#content .date p{
+    transform:translate(16%, -10%);
+}
+#content .row{
+    transform:translate(8%, -10%);
+    white-space: nowrap;
+}
+#content .row img{
+    height: 2rem;
+    padding:.3rem;
+}
+
+/*반응형*/
+/*desktop*/
+@media (min-width:837px){
+    #content .first_write{align-items:center;}
+    
+}
+/*mobile*/
+@media (max-width:837px){
+#content .title_wrap{width:20%; white-space:nowrap}
+#content h1{font-size:54px; margin-top:0}
+#content .title_wrap{font-size:26px}
+#fixedmenu{display:none}
+#content .title_wrap, #content .row, #content .date p{
+    transform:translate(1,0);
+}
+}
