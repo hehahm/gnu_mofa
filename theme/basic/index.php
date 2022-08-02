@@ -87,6 +87,10 @@ include_once(G5_THEME_PATH.'/head.php');
     <?php echo latest('theme/brochure','brochure',1,100);?>
     </div>
 
+    <div id="video" class="section">
+    <?php echo latest('theme/video','video',1,100);?>
+    </div>
+
     <div id="org" class="section">
     <?php echo latest('theme/org','org',1,100);?>
     </div>

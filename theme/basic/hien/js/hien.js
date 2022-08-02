@@ -11,4 +11,21 @@ $(document).ready(function(){
             _this.parent().addClass('on')
         })
     })
+    AOS.init();
+
+    var swiper = new Swiper("#mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: "#mySwiper .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: "#mySwiper .swiper-button-next",
+          prevEl: "#mySwiper .swiper-button-prev",
+        },
+      });
 })

@@ -1,6 +1,10 @@
 /*common*/
+ul,ol,dl{list-style:none}
 .d-flex{display:flex}
 .justify-content-between{justify-content: space-between;}
+.justify-content-end{justify-content:flex-end}
+.justify-content-stretch{justify-content: stretch;}
+.text-align-center{text-align:center}
 .abs{position:absolute}
 .rel{position:relative}
 .fix{position:fixed}
@@ -9,7 +13,8 @@
 .backgroundno{ background-repeat: no-repeat; background-position: center; background-size: cover;}
 
 /*커스터마이징*/
-#logo img{height:50px; padding-right:100px;}
+#logo{padding:2rem 0}
+#logo img{height: 3rem; padding-right: 2rem;}
 #content{ height:100vh;}
 .hd_sch_wr, .hd_login, #tnb, #aside, #gnb_1dul, .lt_wr, .latest_wr, .latest_top_wr, #ft_wr .notice, #visit, .lat .lt_more {display:none;}
 #ft_wr .ft_cnt a:nth-child(3), #ft_wr .ft_cnt a:nth-child(4){display:none}
@@ -97,19 +102,103 @@ div#fixedmenu{width:3px; background-color: white;
     padding:.3rem;
 }
 
+/*포스터*/
+#poster .col{transition-duration:1s;}
+#poster img{height:100%;}
+#poster > .col{padding-right:0;}
+
+/* 이벤트 */
+#event h3{padding:2rem; transition-duration:1s;}
+/* #event ul{padding:2rem;}
+#event img{height:400px;padding:1rem; transition:0.6s; z-index:10}
+#event img:hover{height:500px;} */
+      
+      html,body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: transparent;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 1000px;
+        height: auto;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    #mySwiper .swiper-button-prev{left:315px; right:auto;}
+    #mySwiper .swiper-button-next{right:315px; left:auto;}
+
+    #mySwiper .swiper-button-prev:after, #mySwiper .swiper-button-next:after{
+        display:block;
+        color:white;
+        font-weight:bolder;
+        font-size:1rem;
+        opacity:1;
+    }
+/* 프로그램 */
+#program > div{padding-top:3rem;}
+#program img{border: 10px double rgb(247, 247, 157); border-radius:30px}
+    
+  
+
+
 /*반응형*/
 /*desktop*/
-@media (min-width:837px){
-    #content .first_write{align-items:center;}
-    
+@media (min-width:964px){
+#content .first_write{align-items:center;}
+#mySwiper .swiper-button-prev, #mySwiper .swiper-button-next, .swiper-pagination{display:none}
 }
+#program img{width:750px}
+
 /*mobile*/
-@media (max-width:837px){
-#content .title_wrap{width:20%; white-space:nowrap}
-#content h1{font-size:54px; margin-top:0}
+@media (max-width:964px){
+#content .title_wrap{width:20%; white-space:nowrap; padding-left:1.5rem;}
+#content h1{font-size:80px; margin-top:0}
 #content .title_wrap{font-size:26px}
 #fixedmenu{display:none}
 #content .title_wrap, #content .row, #content .date p{
     transform:translate(1,0);
+}
+#content .first_write{padding-left:5%}
+  
+@media (max-width:600px){
+#content h1{font-size:55px; margin-top:0}
+
+#poster img{height:70%;}
+#poster .col{padding:0}
+#program img{width:70%}
 }
 }

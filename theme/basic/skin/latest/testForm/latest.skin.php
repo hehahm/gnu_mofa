@@ -27,8 +27,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     
                 <!-- 여기다가 내용 적기 -->
 
-    <div id="content" style="background-image:url(<?php echo $img; ?>)">
-    <div class="first_write d-flex flex-column justify-content-center align-items-center text-white h-100">
+    <div id="testForm" style="background-image:url(<?php echo $img; ?>)">
+    <div class="testForm_write d-flex flex-column justify-content-center align-items-center text-white h-100">
                  <?php echo $list[$i]['wr_content']; ?>          
         </div>
      </div>

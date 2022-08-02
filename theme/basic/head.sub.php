@@ -117,6 +117,8 @@ if(!defined('G5_IS_ADMIN'))
 <script src="https://kit.fontawesome.com/1af7da0cec.js" crossorigin="anonymous"></script>
 <!-- 부트스트랩 4.6.1-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<!-- 스와이퍼 css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <!-- aos css -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 

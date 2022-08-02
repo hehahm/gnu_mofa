@@ -28,8 +28,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
 
-     <div id="program" class="poster_main backgroundno" style="background-image:url(<?php echo $img; ?>); height:100vh">   
-         <div class="poster_write d-flex flex-column justify-content-center align-items-center text-white h-100">
+     <div id="program" class="backgroundno" style="background-color:#F7F7E4; height:100vh">   
+         <div class="program_write d-flex flex-column justify-content-center align-items-center">
               <?php echo $list[$i]['wr_content']; ?>
           </div>
      </div>
