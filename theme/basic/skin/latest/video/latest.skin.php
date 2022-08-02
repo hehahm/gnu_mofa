@@ -31,6 +31,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
      <div id="video" class="backgroundno" style="background-image:url(<?php echo $img; ?>);height:100vh">   
          <div class="video_write d-flex flex-column justify-content-center align-items-center text-white h-100">
               <?php echo $list[$i]['wr_content']; ?>
+              <iframe width="750" height="423" src="https://www.youtube.com/embed/bqPoXVR1D_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
      </div>
       

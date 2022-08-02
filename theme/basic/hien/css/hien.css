@@ -134,7 +134,7 @@ div#fixedmenu{width:3px; background-color: white;
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: transparent;
+        background: transparent;        
 
         /* Center slide text vertically */
         display: -webkit-box;
@@ -155,7 +155,7 @@ div#fixedmenu{width:3px; background-color: white;
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit:cover;
       }
 
     #mySwiper .swiper-button-prev{left:315px; right:auto;}
@@ -168,20 +168,56 @@ div#fixedmenu{width:3px; background-color: white;
         font-size:1rem;
         opacity:1;
     }
+
+
 /* 프로그램 */
 #program > div{padding-top:3rem;}
-#program img{border: 10px double rgb(247, 247, 157); border-radius:30px}
-    
-  
+#program img{border: .3rem double rgb(158, 165, 169); border-radius:30px;
+    background-color: whitesmoke;}
+#program .program2{padding-bottom:9rem;}
+
+/* 브로슈어 */
+#brochure{align-items:center;}
+#brochure img{height:40px;}
+#brochure h3{padding-left:30px; padding-right: 30px; margin-bottom:0rem;}
+
+
 
 
 /*반응형*/
 /*desktop*/
 @media (min-width:964px){
-#content .first_write{align-items:center;}
-#mySwiper .swiper-button-prev, #mySwiper .swiper-button-next, .swiper-pagination{display:none}
+    #content .first_write{align-items:center;}
+    #mySwiper .swiper-button-prev, #mySwiper .swiper-button-next, .swiper-pagination{display:none}
+
+    #mySwiper{ overflow: visible;}
+.event_write  > div{ overflow: hidden; padding: 5rem; position: relative;} 
+/* .event_write  > div:after,
+.event_write  > div:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width:5rem;
+    height:100%;
+    background-color: #62CFDF;
+    
+} */
+/* .event_write  > div:after{
+    right:0;    
 }
-#program img{width:750px}
+.event_write  > div:before{
+    left:0;
+} */
+
+
+
+    #mySwiper .swiper-slide img{
+        position:relative;
+        transition-duration:0.6s;}
+    #mySwiper .swiper-slide img:hover{ transform:scale(1.2); z-index:10;}
+    #program img{width:750px}
+}
+
 
 /*mobile*/
 @media (max-width:964px){
@@ -193,12 +229,12 @@ div#fixedmenu{width:3px; background-color: white;
     transform:translate(1,0);
 }
 #content .first_write{padding-left:5%}
-  
+
 @media (max-width:600px){
 #content h1{font-size:55px; margin-top:0}
 
 #poster img{height:70%;}
 #poster .col{padding:0}
-#program img{width:70%}
+#program img{width:90vw; align-items:center;}
 }
 }
