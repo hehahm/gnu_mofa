@@ -7,49 +7,22 @@ $(document).ready(function(){
       slidesPerGroup: 1,
       loop: true,
       loopFillGroupWithBlank: true,
-      pagination: {
-        el: "#mySwiper .swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: "#mySwiper .swiper-button-next",
-        prevEl: "#mySwiper .swiper-button-prev",
-      }
+      pagination: {el: "#mySwiper .swiper-pagination", clickable: true,},
+      navigation: {nextEl: "#mySwiper .swiper-button-next", prevEl: "#mySwiper .swiper-button-prev",}
     });
 
- 
-
-
-    // //console.log($('#pagetop > div[id]').length)
-    // var _thisid = '';
-    // var _arrTop = [];
-    // $('#pagetop > div[id]').each(function(){
-    //   _arrTop.push($(this).offset().top)
-    //   //$(this).attr('data-pos',_thistopPos)  
-    // });
-    // console.log(_arrTop)
-
-    // $(window).scroll(function(){ // 스크롤을 일으킬때마다 계산해라
-
-    //   $('#pagetop > div[id]').each(function(){
-    //   if( $(window).scrollTop() > $(this).offset().top ){ 
-
-    //     _thisid = $(this).attr('id');
-    //     console.log( '#'+_thisid )
-
-        
-    //   }
-    // })
-
-      
-
-    // })
-
-    
-
-    
-
-
+    var scrollPos = '';
+     $(window).scroll(function(){ 
+      scrollPos = $(window).scrollTop()
+      if(scrollPos == 0){
+        $('#gnb li').removeClass('on')
+        $('#gnb li:first-child').addClass('on')}
+      $('.deskNavi').each(function(){
+        if( scrollPos > $(this).offset().top - 200){
+          $('#gnb li').removeClass('on')
+          $('#gnb li a[href="#'+$(this).attr('id')+'"]').parent().addClass('on')}
+      })
+     });
 
     $('#gnb a').click(function(event){
         event.preventDefault(); // 이벤트가 발생하면 a태그의 고유의 기능막아라
@@ -59,10 +32,8 @@ $(document).ready(function(){
             scrollTop : $(_this.attr('href')).offset().top
         }, 400, function(){
             $('#gnb li').removeClass('on')
-            _this.parent().addClass('on')
-        })
+            _this.parent().addClass('on')})
     })
     
 
-    
 })

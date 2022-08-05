@@ -71,31 +71,31 @@ include_once(G5_THEME_PATH.'/head.php');
 <div id="pagetop">
 <?php echo latest('theme/first','banner',1,100);?>
   
-    <div id="poster" class="section">
+    <div id="poster" class="section ">
     <?php echo latest('theme/poster','poster',1,100);?>
     </div>
 
-    <div id="event" class="section">
+    <div id="event" class="section deskNavi">
     <?php echo latest('theme/event','event',1,100);?>
     </div>
     
-    <div id="program" class="section">
+    <div id="program" class="section deskNavi">
     <?php echo latest('theme/program','program',1,100);?>
     </div>
 
-    <div id="brochure" class="section">
+    <div id="brochure" class="section deskNavi">
     <?php echo latest('theme/brochure','brochure',1,100);?>
     </div>
 
-    <div id="video" class="section">
+    <div id="video" class="section deskNavi">
     <?php echo latest('theme/video','video',1,100);?>
     </div>
 
-    <div id="org" class="section">
+    <div id="org" class="section deskNavi">
     <?php echo latest('theme/org','org',1,100);?>
     </div>
 
-    <div id="testForm" class="section">
+    <div id="testForm" class="section deskNavi">
     <?php echo latest('theme/testForm','testForm',1,100);?>
     </div>
 
@@ -103,7 +103,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <?php echo latest('theme/testResult','testResult',1,100);?>
     </div>
 
-    <div id="roster" class="section">
+    <div id="roster" class="section deskNavi">
     <?php echo latest('theme/roster','roster',1,100);?>
     </div>
 
@@ -159,6 +159,7 @@ include_once(G5_THEME_PATH.'/head.php');
     }
     ?>
     <!-- } 최신글 끝 -->
+
 </div>
 
 <?php

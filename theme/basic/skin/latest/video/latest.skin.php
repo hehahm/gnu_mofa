@@ -28,11 +28,12 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
 
-     <div id="video" class="backgroundno" style="background-image:url(<?php echo $img; ?>);height:100vh">   
+     <div id="video" class="backgroundno" style="background-image:url(<?php echo $img; ?>); background-color:#F7F7E4; height:100vh">   
          <div class="video_write d-flex flex-column justify-content-center align-items-center text-white h-100">
               <?php echo $list[$i]['wr_content']; ?>
-              <iframe width="750" height="423" src="https://www.youtube.com/embed/bqPoXVR1D_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+              <iframe style="border: 30px solid #fff" width="850" height="505" src="https://www.youtube.com/embed/bqPoXVR1D_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+           <img src="/img/flight_pattern.png" alt="비행기문양">
      </div>
       
      <!-- 이 사이 멘트 적기 -->
