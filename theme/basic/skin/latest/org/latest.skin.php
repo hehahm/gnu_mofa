@@ -27,7 +27,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     
                 <!-- 여기다가 내용 적기 -->
 
-    <div id="org" class="backgroundno" style="background-image:url(<?php echo $img; ?>);height:100vh">
+    <div style="background: rgb(247,247,228);
+background: linear-gradient(0deg, rgba(247,247,228,1) 21%, rgba(98,207,223,1) 79%); height:100vh">
     <div class="org_write d-flex flex-column justify-content-center align-items-center text-white h-100">
                  <?php echo $list[$i]['wr_content']; ?>          
         </div>

@@ -35,15 +35,14 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<?php
-if (G5_IS_MOBILE) {
-    echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;
-    echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
-    echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
-} else {
-    echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
-    echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">'.PHP_EOL;
-}
+
+<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<?
 
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
@@ -67,8 +66,19 @@ if($config['cf_add_meta'])
             <meta property="og:image" content="//hienhahm.dothome.co.kr/img/banner.png" />
             
 <title><?php echo $g5_head_title; ?></title>
+<!-- XEICON -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<!-- 폰트어썸 -->
+<script src="//kit.fontawesome.com/1af7da0cec.js" crossorigin="anonymous"></script>
+<!-- 부트스트랩 4.6.1-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<!-- 스와이퍼 css -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<!-- aos css -->
+<link href="//unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/theme/basic/css/default.css?ver=<?php echo time();?>">
+<link rel="stylesheet" href="/theme/basic/hien/css/sub.css?ver=<?php echo time();?>">
 <link rel="stylesheet" href="/theme/basic/hien/css/hien.css?ver=<?php echo time();?>">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
@@ -113,14 +123,7 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
-<!-- 폰트어썸 -->
-<script src="https://kit.fontawesome.com/1af7da0cec.js" crossorigin="anonymous"></script>
-<!-- 부트스트랩 4.6.1-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<!-- 스와이퍼 css -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-<!-- aos css -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>

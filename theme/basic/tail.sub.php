@@ -6,10 +6,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 <?php run_event('tail_sub'); ?>
 <!-- 스와이퍼 js -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <!-- aos js 파일 -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="//unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- 개인 js파일 -->
+<script src="/theme/basic/hien/js/sub.js?ver=<?php echo time()?>"></script>
 <script src="/theme/basic/hien/js/hien.js?ver=<?php echo time()?>"></script>
 </body>
 </html>

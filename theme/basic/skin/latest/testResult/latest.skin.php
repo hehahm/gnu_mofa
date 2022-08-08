@@ -28,7 +28,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
     <div id="testResult" style="background-color:#F7F7E4; height:100vh">
-    <div class="testResult_write d-flex flex-column justify-content-center align-items-center text-white h-100">
+    <div class="testResult_write d-flex flex-column justify-content-center align-items-center text-white text-center h-100">
                  <?php echo $list[$i]['wr_content']; ?>          
         </div>
      </div>

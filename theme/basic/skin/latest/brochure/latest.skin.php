@@ -27,13 +27,14 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     
                 <!-- 여기다가 내용 적기 -->
 
-        <div id="brochure" class="backgroundno" style="background: linear-gradient(to right, #2CC0E4 0%, #5CCBDC 80%, #A3DCD1 100%);height:200px">   
+        <div class="backgroundno" style="background-image:url(<?php echo $img; ?>);height:300px">   
          <div class="brochure_write d-flex justify-content-center align-items-center text-white h-100">
               <?php echo $list[$i]['wr_content']; ?>
           </div>
      </div>
       
      <!-- 이 사이 멘트 적기 -->
+
 
 
     <?php }  ?>

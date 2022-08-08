@@ -28,7 +28,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 <!-- 여기다가 내용 적기 -->
 
 
-     <div id="video" class="backgroundno" style="background-image:url(<?php echo $img; ?>); background-color:#F7F7E4; height:100vh">   
+     <div id="video" style="background: rgb(247,247,228);
+background: linear-gradient(180deg, rgba(247,247,228,1) 21%, rgba(98,207,223,1) 79%); height:auto">   
          <div class="video_write d-flex flex-column justify-content-center align-items-center text-white h-100">
               <?php echo $list[$i]['wr_content']; ?>
               <iframe style="border: 30px solid #fff" width="850" height="505" src="https://www.youtube.com/embed/bqPoXVR1D_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
