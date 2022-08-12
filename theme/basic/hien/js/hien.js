@@ -1,7 +1,17 @@
 $(document).ready(function(){
     // $('body').addClass('ccc')
     AOS.init();
-   
+
+    var swiper = new Swiper("#mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {el: "#mySwiper .swiper-pagination", clickable: true,},
+      navigation: {nextEl: "#mySwiper .swiper-button-next", prevEl: "#mySwiper .swiper-button-prev",}
+    });
+
 
     var scrollPos = '';
      $(window).scroll(function(){ 
@@ -27,6 +37,7 @@ $(document).ready(function(){
             _this.parent().addClass('on')})
     })
     
+
     const org = new Swiper('#orgSwiper', {
       // Optional parameters
       loop: true,
@@ -45,5 +56,17 @@ $(document).ready(function(){
       },
       
     });
+
+    $('#book_btn > a').click(function(){
+      $('#book_btn').toggleClass('on')
+    });
+    $('#book_btn').click(function(){
+      $('body, html').animate({
+        scrollTop: $($('#brochure')).offset().top
+      },400,function(){
+        $('#book_btn').removeClass('on')
+      });
+    })
+  
 
 })

@@ -1,0 +1,12 @@
+.vscode/
+data/
+install/
+shop/
+shop.config.php
+yc4_import_run.php
+yc4_import.php
+orderupgrade.php
+mobile/
+adm/
+*.psd
+*.ai

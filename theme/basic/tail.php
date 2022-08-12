@@ -28,19 +28,26 @@ if(G5_COMMUNITY_USE === false) {
 <div id="ft">
 
     <div id="ft_wr">
-        <div id="ft_link" class="ft_cnt">
-            <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
-            <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보처리방침</a>
-            <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
-        </div>
-        <div id="ft_company" class="ft_cnt">
-        	<h2>사이트 정보</h2>
-	        <p class="ft_info">
-	        	회사명 : 회사명 / 대표 : 대표자명<br>
-				주소  : OO도 OO시 OO구 OO동 123-45<br>
+        
+        <div id="ft_company" class="ft_cnt d-flex row align-items-center justify-content-between">
+        	<img src="/img/mofa_logo.png">
+	        <p class="ft_info pl-4">
+            주소 : (110-787) 서울시 종로구 사직로 8길 60 외교부 유엔과 국제기구 인사센터<br>
+            전화 : 02-2100-8421, 7241 팩스 : 02-2100-7963 이메일 : unrecruit@mofa.go.kr
 			</p>
+            <div class="ft_sns">
+                <strong>외교부 소셜미디어</strong>
+                <ul class="d-flex row justify-content-between align-items-center">
+                    <li><a href="//www.facebook.com/mofakr.kr"><img src="/img/fb.png"></a></li>
+                    <li><a href="//www.instagram.com/mofa_kr/"><img src="/img/insta.png"</a></li>
+                    <li><a href="//www.youtube.com/user/MOFAKorea"><img src="/img/youtube.png"></a></li>
+                </ul>
+            </div>
 	    </div>
+        <div id="ft_link" class="ft_cnt d-flex justify-content-end">
+            <a href="//unrecruit.mofa.go.kr/new/">홈페이지</a>
+            <a href="//www.mofa.go.kr/www/wpge/m_4194/contents.do">개인정보처리방침</a>
+        </div>
         <?php
         //공지사항
         // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
@@ -52,11 +59,13 @@ if(G5_COMMUNITY_USE === false) {
 		<?php echo visit('theme/basic'); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
 	</div>      
         <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+        <div id="ft_copy">Copyright &copy; <b>Hee-eun Hahm</b> All rights reserved.</div>
     
-    
+    <button type="button" id="book_btn" href="#brochure">
+    	<i class="fa-solid fa-book" aria-hidden="true"></i><span class="sound_only">브로슈어</span>
+    </button>
     <button type="button" id="top_btn">
-    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+    	<i class="fa-solid fa-globe" aria-hidden="true"></i><span class="sound_only">상단으로</span>
     </button>
     <script>
     $(function() {
